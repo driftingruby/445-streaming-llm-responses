@@ -1,0 +1,26 @@
+{
+  "name": "app",
+  "private": true,
+  "scripts": {
+    "build": "bun bun.config.js",
+    "build:css:compile": "sass ./app/assets/stylesheets/application.bootstrap.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules",
+    "build:css:prefix": "postcss ./app/assets/builds/application.css --use=autoprefixer --output=./app/assets/builds/application.css",
+    "build:css": "bun run build:css:compile && bun run build:css:prefix",
+    "watch:css": "nodemon --watch ./app/assets/stylesheets/ --ext scss --exec \"bun run build:css\""
+  },
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.2",
+    "@hotwired/turbo-rails": "^8.0.3",
+    "@popperjs/core": "^2.11.8",
+    "autoprefixer": "^10.4.18",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "nodemon": "^3.1.0",
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.71.1"
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}
