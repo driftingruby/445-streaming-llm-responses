@@ -6,3 +6,6 @@ import { application } from "./application"
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import MarkdownTextController from "./markdown_text_controller"
+application.register("markdown-text", MarkdownTextController)

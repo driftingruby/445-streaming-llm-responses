@@ -1,3 +1,8 @@
+@use "highlight.js/styles/github-dark.css";
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
 @import 'drifting_ruby';
+
+pre {
+  padding: 10px;
+}
